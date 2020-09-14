@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,11 +12,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="You_Are_Awesome_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzr-MG-ejy">
-                                <rect key="frame" x="16" y="64" width="382" height="100"/>
+                                <rect key="frame" x="16" y="20" width="382" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="4or-HM-9d7"/>
                                 </constraints>
@@ -25,24 +25,40 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XSN-ey-Jkg">
-                                <rect key="frame" x="16" y="210" width="382" height="632"/>
+                                <rect key="frame" x="16" y="166" width="382" height="550"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zmE-ij-YfG">
-                                <rect key="frame" x="155" y="172" width="104" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zmE-ij-YfG">
+                                <rect key="frame" x="294" y="128" width="104" height="30"/>
                                 <state key="normal" title="Show Message"/>
                                 <connections>
                                     <action selector="messageButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xun-mt-IBN"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play Sound" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qp2-ka-i5y">
+                                <rect key="frame" x="16" y="137" width="86" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lS1-Mn-xSl">
+                                <rect key="frame" x="122" y="127" width="51" height="31"/>
+                                <connections>
+                                    <action selector="playSoundToggled:" destination="BYZ-38-t0r" eventType="valueChanged" id="mYW-56-khv"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="lS1-Mn-xSl" firstAttribute="leading" secondItem="Qp2-ka-i5y" secondAttribute="trailing" constant="20" id="7aH-1Y-ncC"/>
                             <constraint firstItem="XSN-ey-Jkg" firstAttribute="top" secondItem="zmE-ij-YfG" secondAttribute="bottom" constant="8" id="9jV-ba-Xff"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hzr-MG-ejy" secondAttribute="trailing" constant="16" id="GkV-W6-C5z"/>
                             <constraint firstItem="XSN-ey-Jkg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="HRd-Jj-MNY"/>
+                            <constraint firstItem="Qp2-ka-i5y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="NEP-2v-Be0"/>
+                            <constraint firstItem="XSN-ey-Jkg" firstAttribute="top" secondItem="Qp2-ka-i5y" secondAttribute="bottom" constant="8" id="R7T-eV-anx"/>
                             <constraint firstItem="hzr-MG-ejy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Stf-h9-pp0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XSN-ey-Jkg" secondAttribute="bottom" constant="20" id="W7D-HR-xlR"/>
-                            <constraint firstItem="zmE-ij-YfG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ryu-m1-NIq"/>
+                            <constraint firstItem="XSN-ey-Jkg" firstAttribute="top" secondItem="lS1-Mn-xSl" secondAttribute="bottom" constant="8" id="car-Qs-RcK"/>
+                            <constraint firstAttribute="trailing" secondItem="zmE-ij-YfG" secondAttribute="trailing" constant="16" id="ekt-Zl-JIG"/>
                             <constraint firstItem="zmE-ij-YfG" firstAttribute="top" secondItem="hzr-MG-ejy" secondAttribute="bottom" constant="8" id="sA2-8t-CYK"/>
                             <constraint firstItem="hzr-MG-ejy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="tDj-73-S1s"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XSN-ey-Jkg" secondAttribute="trailing" constant="16" id="z97-QG-sZr"/>
@@ -52,6 +68,7 @@
                     <connections>
                         <outlet property="imageView" destination="XSN-ey-Jkg" id="PVk-NG-MNk"/>
                         <outlet property="messageLabel" destination="hzr-MG-ejy" id="DYf-F9-aMG"/>
+                        <outlet property="playSoundSwitch" destination="lS1-Mn-xSl" id="zoW-VE-wdT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
